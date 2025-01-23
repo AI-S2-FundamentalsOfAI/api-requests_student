@@ -1,29 +1,12 @@
 # API requests met priority queue
 
-(c) 2024 Hogeschool Utrecht  
+
+(c) 2024 Hogeschool Utrecht<br>
 Auteurs: David Isaacs Paternostro en Tijmen Muller
 
-* Studentnummer: 
-* Naam: 
-* Datum: 
-
-
-## Installatie
-
-Als er nog geen omgeving genaamd `ai-s2` is, creeer deze dan door in de Anaconda 
-Prompt (`conda`) naar de directory van dit project te gaan en daar te typen:
-```conda env create -f s2_ai_conda.yaml```
-
-### Interpreter instellen in PyCharm
-1. Ga naar File >> Settings >> Project: _projectnaam_ >> Project Interpreter en dan:
-   1. kies ai-s2 in het dropdown menu; of
-   2. ga naar Add Interpreter >> Add Local Interpreter >> Conda Environment >> 
-      Use Existing Environment >> selecteer `ai-s2` in het dropdown menu.
-2. Klik rechtsonder in de GUI waar je 'Python' ziet staan.
-
-### Interpreter instellen in VSCode
-1. Klik rechtsonder in de GUI waar je 'Python' ziet staan. Er komt midden bovenin je
-   scherm een dropdown menu, kies daar: `ai-s2`.
+* Studentnummer:
+* Naam:
+* Datum:
 
 
 ## Vooronderzoek
@@ -38,7 +21,7 @@ waarbij je waardes `append` en door de lijst zoekt naar de hoogste prioriteit.
 Een slimmere aanpak is om een _minheap_ te gebruiken, die in Python beschikbaar
 is als de module `heapq`.
 
-1. Gebruik `simulate.py` om te onderzoeken hoe lang bovengenoemde twee functies 
+1. Gebruik `simulate.py` om te onderzoeken hoe lang bovengenoemde twee functies
 duren in het geval van het gebruik van een standaard Python `list` en bij gebruik
 van de Python library `heapq`. Simuleer dit met verschillende waarden voor
 probleemgrootte _n_.
@@ -65,7 +48,7 @@ te testen. Je mag geen externe modules van Python gebruiken voor je implementati
 * Begin met de simpelste functies en bouw langzaam naar `push()`, `pop()` en `from_list()`.
 * Maak gebruik van onderstaande illustraties om een idee te krijgen hoe je een heap
   kan vertalen naar een Python list. Je kan de volgende formules gebruiken om in een
-  lijst de _parents_ en _children_ te vinden.  
+  lijst de _parents_ en _children_ te vinden.
   Gegeven index `i`:
   * `parent(i) = floor((i - 1) / 2)`
   * `left_child(i) = 2 * i + 1`

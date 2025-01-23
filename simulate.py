@@ -152,4 +152,4 @@ if __name__ == '__main__':
     sim_pqueue_push(eps, sizes)
     sim_pqueue_pop(eps, sizes)
 
-    print(f"Simulation done after {time.time() - sim_start:.2f} s")
+    print(f"\nSimulation done after {time.time() - sim_start:.2f} s")
