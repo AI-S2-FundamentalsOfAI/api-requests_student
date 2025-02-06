@@ -134,7 +134,6 @@ def sim_pqueue_pop(episodes, ns):
         print(f"{n:6}\t{duration / episodes:10.0f} ns")
 
 
-
 if __name__ == '__main__':
     eps = 1_000
     sizes = [1_000 * 2 ** i for i in range(6)]
@@ -152,4 +151,4 @@ if __name__ == '__main__':
     sim_pqueue_push(eps, sizes)
     sim_pqueue_pop(eps, sizes)
 
-    print(f"\nSimulation done after {time.time() - sim_start:.2f} s")
+    print(f"Simulation done after {time.time() - sim_start:.2f} s")
