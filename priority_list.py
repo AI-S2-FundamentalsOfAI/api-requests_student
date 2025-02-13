@@ -8,8 +8,9 @@ David Isaacs Paternostro en Tijmen Muller (tijmen.muller@hu.nl)
 
 
 def push(plist, value):
-    """ Add the value to the priority list. """
+    """ Add the value to the priority list. Return True on success. """
     plist.append(value)
+    return True
 
 
 def find_index_of_minimum(plist):
@@ -18,6 +19,5 @@ def find_index_of_minimum(plist):
 
 
 def pop(plist, *_):
-    """ Remove the top element and then reorder the priority queue so that the shape and invariant are preserved again.
-    Finally, return the removed top element. """
+    """ Return the element with the minimal value and remove it from the priority list. """
     pass

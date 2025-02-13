@@ -59,11 +59,15 @@ def sim_plist_push(episodes, ns):
         lst = [random.randrange(0, 100) for _ in range(n)]
         assert len(lst) == n
 
-        # Time function
-        time.sleep(1e-2)
-        duration = timeit.timeit(lambda: priority_list.push(lst, random.randrange(1, 100)), number=episodes)
+        # Only simulate if implemented
+        if priority_list.push(lst, 0) is None:
+            print("\tFunction not implemented")
+        else:
+            # Time function
+            time.sleep(1e-2)
+            duration = timeit.timeit(lambda: priority_list.push(lst, random.randrange(1, 100)), number=episodes)
 
-        print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
+            print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
 
 
 def sim_plist_pop(episodes, ns):
@@ -75,11 +79,15 @@ def sim_plist_pop(episodes, ns):
         lst = [random.randrange(0, 100) for _ in range(n)]
         assert len(lst) == n
 
-        # Time function
-        time.sleep(1e-2)
-        duration = timeit.timeit(lambda: priority_list.pop(lst), number=episodes)
+        # Only simulate if implemented
+        if priority_list.pop(lst) is None:
+            print("\tFunction not implemented")
+        else:
+            # Time function
+            time.sleep(1e-2)
+            duration = timeit.timeit(lambda: priority_list.pop(lst), number=episodes)
 
-        print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
+            print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
 
 
 def sim_pqueue_push(episodes, ns):
@@ -93,11 +101,15 @@ def sim_pqueue_push(episodes, ns):
         heapq.heapify(queue)
         assert len(queue) == n
 
-        # Time function
-        time.sleep(1e-2)
-        duration = timeit.timeit(lambda: priority_queue.push(queue, random.randrange(1, 100)), number=episodes)
+        # Only simulate if implemented
+        if priority_queue.push(queue, 0) is None:
+            print("\tFunction not implemented")
+        else:
+            # Time function
+            time.sleep(1e-2)
+            duration = timeit.timeit(lambda: priority_queue.push(queue, random.randrange(1, 100)), number=episodes)
 
-        print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
+            print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
 
 
 def sim_pqueue_pop(episodes, ns):
@@ -110,11 +122,15 @@ def sim_pqueue_pop(episodes, ns):
         heapq.heapify(queue)
         assert len(queue) == n
 
-        # Time function
-        time.sleep(1e-2)
-        duration = timeit.timeit(lambda: priority_queue.pop(queue), number=episodes)
+        # Only simulate if implemented
+        if priority_queue.pop(queue) is None:
+            print("\tFunction not implemented")
+        else:
+            # Time function
+            time.sleep(1e-2)
+            duration = timeit.timeit(lambda: priority_queue.pop(queue), number=episodes)
 
-        print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
+            print(f"{n:8}\t{duration * 10e9 / episodes:10.0f} ns")
 
 
 if __name__ == '__main__':

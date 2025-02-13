@@ -44,7 +44,7 @@ def swap(pq, i, j):
 
 def push(pq, value):
     """ Add the value to the priority queue. Make sure correct shape
-    and invariant are preserved. """
+    and invariant are preserved. Return True on success."""
     pass
 
 
